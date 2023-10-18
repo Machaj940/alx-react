@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/alx-react/dashboard/static/css/main.8a52dd74.css",
-    "main.js": "/alx-react/dashboard/static/js/main.1aa1f3fc.js",
-    "static/media/holb-logo.jpg": "/alx-react/dashboard/static/media/holb-logo.24bab5d633e36ca8d17e.jpg",
-    "index.html": "/alx-react/dashboard/index.html",
-    "main.8a52dd74.css.map": "/alx-react/dashboard/static/css/main.8a52dd74.css.map",
-    "main.1aa1f3fc.js.map": "/alx-react/dashboard/static/js/main.1aa1f3fc.js.map"
+    "main.css": "/alx-react/static/css/main.8a52dd74.css",
+    "main.js": "/alx-react/static/js/main.e62f69f8.js",
+    "static/media/holb-logo.jpg": "/alx-react/static/media/holb-logo.24bab5d633e36ca8d17e.jpg",
+    "index.html": "/alx-react/index.html",
+    "main.8a52dd74.css.map": "/alx-react/static/css/main.8a52dd74.css.map",
+    "main.e62f69f8.js.map": "/alx-react/static/js/main.e62f69f8.js.map"
   },
   "entrypoints": [
     "static/css/main.8a52dd74.css",
-    "static/js/main.1aa1f3fc.js"
+    "static/js/main.e62f69f8.js"
   ]
 }
