@@ -33,7 +33,7 @@ class App extends Component {
   */
 
   /* Or the code below
-
+  
   constructor(props) {
     super(props);
 
@@ -52,7 +52,7 @@ class App extends Component {
 
   componentWillUnmount() {
     document.removeEventListener("keydown", this.handleKeyPress);
-  } */
+  }*/
 
   render () {
     const { isLoggedIn } = this.props;
@@ -88,7 +88,7 @@ App.propTypes = {
 App.defaultProps = {
   isLoggedIn: true,
   logOut: () => {
-
+    return;
   }
 };
 
