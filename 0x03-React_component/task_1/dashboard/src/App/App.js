@@ -8,27 +8,28 @@ import PropTypes from 'prop-types';
 import CourseList from '../CourseList/CourseList';
 
 class App extends Component {
-  componentDidMount() {
-    document.addEventListener( 'keydown', (event) => {
+  componentDidMount () {
+    document.addEventListener('keydown', (event) => {
       event.preventDefault();
-      if( true === event.ctrlKey && 'h' === event.key ) {
-        alert('Logging you out');
-        this.logOut();
-      }
-    });
-  }
-  componentWillUnmount() {
-    document.addEventListener( 'keydown', (event) => {
-      event.preventDefault();
-      if( true === event.ctrlKey && 'h' === event.key ) {
+      if (event.ctrlKey === true && event.key === 'h') {
         alert('Logging you out');
         this.logOut();
       }
     });
   }
 
-  logOut() {
-  };
+  componentWillUnmount () {
+    document.addEventListener('keydown', (event) => {
+      event.preventDefault();
+      if (event.ctrlKey === true && event.key === 'h') {
+        alert('Logging you out');
+        this.logOut();
+      }
+    });
+  }
+
+  logOut () {
+  }
 
   render () {
     const { isLoggedIn } = this.props;
