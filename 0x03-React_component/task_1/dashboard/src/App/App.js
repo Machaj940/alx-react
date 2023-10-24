@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   componentWillUnmount () {
-    document.addEventListener('keydown', (event) => {
+    document.removeEventListener('keydown', (event) => {
       if (event.ctrlKey === true && event.key === 'h') {
         alert('Logging you out');
         this.props.logOut();
