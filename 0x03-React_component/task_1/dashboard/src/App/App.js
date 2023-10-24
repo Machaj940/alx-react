@@ -10,7 +10,6 @@ import CourseList from '../CourseList/CourseList';
 class App extends Component {
   componentDidMount () {
     document.addEventListener('keydown', (event) => {
-      event.preventDefault();
       if (event.ctrlKey === true && event.key === 'h') {
         alert('Logging you out');
         this.logOut();
@@ -20,16 +19,40 @@ class App extends Component {
 
   componentWillUnmount () {
     document.addEventListener('keydown', (event) => {
-      event.preventDefault();
       if (event.ctrlKey === true && event.key === 'h') {
         alert('Logging you out');
-        this.logOut();
+        this.props.logOut();
       }
     });
   }
 
-  logOut () {
+  /* or use this.logOut() and define logOut in the class like
+  logOut() {
+
   }
+  */
+
+  /* Or the code below
+
+  constructor(props) {
+    super(props);
+
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
+
+  handleKeyPress(e) {
+    if (e.ctrlKey && e.key === "h") {
+      alert("Logging you out");
+      this.props.logOut();
+    }
+  }
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyPress);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyPress);
+  } */
 
   render () {
     const { isLoggedIn } = this.props;
@@ -64,7 +87,9 @@ App.propTypes = {
 
 App.defaultProps = {
   isLoggedIn: true,
-  logOut: () => {}
+  logOut: () => {
+
+  }
 };
 
 export default App;
