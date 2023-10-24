@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import CourseList from '../CourseList/CourseList';
 
 class App extends Component {
-  componentDidMount () {
+  /* componentDidMount () {
     document.addEventListener('keydown', (event) => {
       if (event.ctrlKey === true && event.key === 'h') {
         alert('Logging you out');
@@ -24,7 +24,7 @@ class App extends Component {
         this.props.logOut();
       }
     });
-  }
+  } */
 
   /* or use this.logOut() and define logOut in the class like
   logOut() {
@@ -32,7 +32,7 @@ class App extends Component {
   }
   */
 
-  /* Or the code below
+  /* Or the code below */
   
   constructor(props) {
     super(props);
@@ -52,7 +52,7 @@ class App extends Component {
 
   componentWillUnmount() {
     document.removeEventListener("keydown", this.handleKeyPress);
-  }*/
+  }
 
   render () {
     const { isLoggedIn } = this.props;
