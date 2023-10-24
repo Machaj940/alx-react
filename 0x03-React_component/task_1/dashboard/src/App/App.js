@@ -12,7 +12,7 @@ class App extends Component {
     document.addEventListener('keydown', (event) => {
       if (event.ctrlKey === true && event.key === 'h') {
         alert('Logging you out');
-        this.logOut();
+        this.props.logOut();
       }
     });
   }
