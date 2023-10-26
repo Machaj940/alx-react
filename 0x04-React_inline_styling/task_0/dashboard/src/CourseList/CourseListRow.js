@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import './CourseList.css';
 
-function CourseListRow({isHeader, textFirstCell, textSecondCell}) {
+function CourseListRow ({ isHeader, textFirstCell, textSecondCell }) {
   let content;
-  const background = {backgroundColor: isHeader?"#deb5b545":"#f5f5f5ab"};
-  
+  const background = { backgroundColor: isHeader ? '#deb5b545' : '#f5f5f5ab' };
+
   if (isHeader && textSecondCell === null) {
-    content = <th colSpan="2">{textFirstCell}</th>;
+    content = <th colSpan='2'>{textFirstCell}</th>;
   }
 
   if (isHeader && textSecondCell !== null) {
@@ -16,12 +16,12 @@ function CourseListRow({isHeader, textFirstCell, textSecondCell}) {
   if (!isHeader) {
     content = <><td>{textFirstCell}</td><td>{textSecondCell}</td></>;
   }
-  
+
   return (
     <tr style={background}>
       {content}
     </tr>
-  )
+  );
 }
 
 CourseListRow.propTypes = {
@@ -31,11 +31,11 @@ CourseListRow.propTypes = {
     PropTypes.string,
     PropTypes.number
   ])
-}
+};
 
 CourseListRow.defaultProps = {
   isHeader: false,
   textSecondCell: null
 };
 
-export default CourseListRow
+export default CourseListRow;
