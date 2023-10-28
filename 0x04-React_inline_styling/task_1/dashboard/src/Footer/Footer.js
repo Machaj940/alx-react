@@ -1,6 +1,5 @@
 import { getFullYear, getFooterCopy } from '../utils';
 import { StyleSheet, css } from 'aphrodite';
-//import './Footer.css'
 
 function Footer() {
   const year = getFullYear();
