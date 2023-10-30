@@ -10,7 +10,7 @@ function CourseListRow ({ isHeader, textFirstCell, textSecondCell }) {
   }
 
   if (isHeader && textSecondCell !== null) {
-    content = <><th>{textFirstCell}</th><th>{textSecondCell}</th></>;
+    content = <><th className={css(styles.textAlign)}>{textFirstCell}</th><th className={css(styles.textAlign)}>{textSecondCell}</th></>;
   }
 
   if (!isHeader) {
@@ -18,7 +18,7 @@ function CourseListRow ({ isHeader, textFirstCell, textSecondCell }) {
   }
 
   return (
-    <tr style={background} className={isHeader && textSecondCell !== null ? css(styles.trth, styles.textAlign) : css(styles.normal), isHeader && textSecondCell === null ? css(styles.trth) : css(styles.normal)}>
+    <tr style={background} className={isHeader ? css(styles.trth) : css(styles.normal)}>
       {content}
     </tr>
   );
