@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import React from 'react';
-import './Notifications.css';
 import NotificationItem from './NotificationItem';
 import PropTypes from 'prop-types';
 import { NotificationItemShape } from './NotificationItemShape';
