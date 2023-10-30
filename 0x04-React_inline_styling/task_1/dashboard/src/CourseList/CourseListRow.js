@@ -6,11 +6,11 @@ function CourseListRow ({ isHeader, textFirstCell, textSecondCell }) {
   const background = { backgroundColor: isHeader ? '#deb5b545' : '#f5f5f5ab' };
 
   if (isHeader && textSecondCell === null) {
-    content = <th colSpan='2' className={css(styles.trth)}>{textFirstCell}</th>;
+    content = <th colSpan='2'>{textFirstCell}</th>;
   }
 
   if (isHeader && textSecondCell !== null) {
-    content = <><th className={css(styles.courseNameHeader, styles.trth)}>{textFirstCell}</th><th className={css(styles.creditHeader, styles.trth)}>{textSecondCell}</th></>;
+    content = <><th>{textFirstCell}</th><th>{textSecondCell}</th></>;
   }
 
   if (!isHeader) {
@@ -18,7 +18,7 @@ function CourseListRow ({ isHeader, textFirstCell, textSecondCell }) {
   }
 
   return (
-    <tr style={background}>
+    <tr style={background} className={isHeader && textSecondCell !== null ? css(styles.trth, styles.textAlign) : css(styles.normal), isHeader && textSecondCell === null ? css(styles.trth) : css(styles.normal)}>
       {content}
     </tr>
   );
@@ -44,13 +44,13 @@ const styles = StyleSheet.create({
     fontWeight: 600,
   },
 
-  courseNameHeader: {
+  textAlign: {
     textAlign: 'left',
   },
 
-  creditHeader: {
-    textAlign: 'left',
-  },
+  normal: {
+    fontWeight: 300,
+  }
 });
 
 export default CourseListRow;
