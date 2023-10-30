@@ -53,7 +53,6 @@ Notifications.defaultProps = {
 
 const styles = StyleSheet.create({
   notifications: {
-    border: '1px dashed #FF5A5F',
     padding: 20,
     float: 'right',
     marginTop: 10,
