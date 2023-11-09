@@ -14,8 +14,6 @@ function Footer() {
 
 const styles = StyleSheet.create({
   Footer: {
-    position: 'fixed',
-    bottom: 0,
     width: '100%',
     textAlign: 'center',
     fontStyle: 'italic',
