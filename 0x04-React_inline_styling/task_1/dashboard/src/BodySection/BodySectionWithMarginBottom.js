@@ -7,7 +7,8 @@ class BodySectionWithMarginBottom extends Component {
   render() {
     return (
       <div className={css(styles.bodySectionWithMargin)}>
-        <BodySection {...this.props} />
+        <BodySection {...this.props}>
+        </BodySection>
       </div>
     );
   }
